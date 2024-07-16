@@ -1,0 +1,17 @@
+import DataScienceEcosystem as nbf
+from DataScienceEcosystem.v4 import new_notebook, new_markdown_cell
+
+# Crear un nuevo notebook
+nb = new_notebook()
+
+# Agregar una celda de markdown
+intro_text = "En este notebook, se presenta una visión general de las herramientas y el ecosistema de la Ciencia de Datos."
+cell = new_markdown_cell(source=intro_text)
+nb.cells.append(cell)
+
+# Guardar el notebook en un archivo
+with open('DataScienceNotebook.ipynb', 'w') as f:
+    nbf.write(nb, f)
+
+# Imprimir mensaje de confirmación
+print("Se ha creado el notebook 'DataScienceNotebook.ipynb' con la introducción.")
